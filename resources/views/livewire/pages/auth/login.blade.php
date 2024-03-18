@@ -26,11 +26,13 @@ $login = function () {
 
         case 2:
             $this->redirectIntended(default: route('admin', absolute: false), navigate: true);
-
-        // case 3:
+            break;
+        case 3:
+            $this->redirectIntended(default: route('dashboard', absolute: false), navigate: true);
+            break;
 
         default:
-            $this->redirectIntended(default: route('normal', absolute: false), navigate: true);
+            return redirect('/');
             break;
     }
 };
